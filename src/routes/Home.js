@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { connect } from "react-redux";
 import ToDo from "../components/ToDo";
-import { actionCreators } from "../store";
+// import { actionCreators } from "../store";
+import { add } from "../store";
 
 function Home({ toDos, addToDo }) {
   const [text, setText] = useState("");
@@ -38,7 +39,7 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     addToDo: (text, inputRef) => {
-      dispatch(actionCreators.addToDo(text));
+      dispatch(add(text));
       inputRef.current.focus();
     },
   };

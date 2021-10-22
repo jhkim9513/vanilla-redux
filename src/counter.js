@@ -32,7 +32,7 @@ const onChange = () => {
 // store를 구독하면 변화가있을 때 마다 함수를 실행한다. 지금같은 경우는 onChange함수
 countStore.subscribe(onChange);
 
-// dispatch가 state와 action을 파라미터로 reducer를 부른다.
+// dispatch가 action을 파라미터로 reducer를 부른다.
 // action은 object여야함
 const handleAdd = () => {
   countStore.dispatch({ type: ADD });
